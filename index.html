@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fay's Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="speed-test">
+    <h1>Fay's Test</h1>
+    <div class="speedometer-container">
+      <canvas id="speedometer" width="300" height="300"></canvas>
+      <div class="speed-label">
+        <p id="current-speed">0</p>
+        <small>Mbps</small>
+      </div>
+    </div>
+    <div id="progress">
+      <p id="progress-message">Click "Start Test" to begin.</p>
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div id="metrics">
+      <p><strong>Download Speed:</strong> <span id="download-speed">--</span> Mbps</p>
+      <p><strong>Upload Speed:</strong> <span id="upload-speed">--</span> Mbps</p>
+      <p><strong>Latency:</strong> <span id="latency">--</span> ms</p>
+      <p><strong>Jitter:</strong> <span id="jitter">--</span> ms</p>
+      <p><strong>Packet Loss:</strong> <span id="packet-loss">--</span>%</p>
+    </div>
+    <div id="server-selection">
+      <label for="server">Choose a server:</label>
+      <select id="server">
+        <option value="US">United States</option>
+        <option value="EU">Europe</option>
+        <option value="ASIA">Asia</option>
+      </select>
+    </div>
+    <button id="start-btn" onclick="startSpeedTest()">Start Test</button>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    <div id="last-result">
+      <h3>Last Test Results:</h3>
+      <p id="last-results">No previous test available.</p>
+    </div>
+    <div id="additional-info">
+      <p><strong>IP Address:</strong> <span id="ip-address">1.119.389.99</span></p>
+      <p><strong>Type:</strong> <span id="type">Socks 5</span></p>
+      <p><strong>Provider:</strong> <span id="provider">Verizon Fios</span></p>
+      <p><strong>OS:</strong> <span id="os">Mac OS Monterey</span></p>
+    </div>
+  </div>
+</body>
+</html>
